@@ -2,10 +2,7 @@
 *:focus         { outline: none}
 ::selection       { background: #eee; opacity:1.0; color:#000; padding:10px; /* Safari */ }
 
-body { background:#fff; color:#000; overflow-x: hidden; font-family: sans-serif; padding:0; margin:0; }
-
-header { padding: 45px; border-bottom: 1px solid #222; }
-header a img {}
+body { background:#fff; color:#000; overflow-x: hidden; font-family: sans-serif; padding:0; margin:0;}
 
 nav { padding: 45px; float: left; }
 nav details summary { margin-bottom: 30px }
@@ -65,7 +62,7 @@ main .shortcut { background: #fff; display: inline-block; padding: 2px 5px; marg
 main > table.logbook tr td { padding-bottom: 15px;padding-top: 15px; }
 main > table img { max-width: 100%; display: block; margin:20px 0;}
 main > table tr th { text-align: left; font-weight: bold }
-main > table tr > * { padding:5px 15px; vertical-align: top;}
+main > table tr > * { padding:5px 15px; vertical-align: top; border:1px solid black;}
 
 footer { line-height: 30px; clear:both; padding:45px; }
 footer hr { margin-bottom: 15px }
@@ -116,3 +113,22 @@ ul.nobull li {list-style-type: none}
 @media (max-width: 350px) {
   nav .site-nav section { width: 100%; }
 }
+
+/* From oscean */
+* { margin:0;padding:0;box-sizing:border-box;text-decoration:none;color:#000 }
+nav { margin:0 0 30px }
+nav ul { padding:0;margin:0 45px 30px 0;float:left }
+nav ul li { list-style-type:none;white-space:pre }
+nav ul li a:hover { background:#000;color:#fff }
+main ::selection { background-color:#72dec2;color:#000;text-decoration:none }
+main a:hover { background-color:#000;color:#fff;text-decoration:none }
+main a:before { content:"{" }
+main a:after { content:"}" }
+main a[target="_blank"]:before { content:"[" }
+main a[target="_blank"]:after { content:"]" }
+
+#spookyCanvas {margin:0 !important; padding: 0 !important;}
+
+/* #spookyCanvas { position:fixed; z-index: -1; top: 0;
+  right: 0;
+} */
