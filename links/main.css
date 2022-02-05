@@ -80,12 +80,12 @@ ul.nobull li {list-style-type: none}
 /* Theme */
 
 @media (prefers-color-scheme: dark) {
-  body {background: #000; color: white}
+  body {background: #000; color: #dddddd}
   body header a img { filter: invert(1)}
   body a { color: white;}
   main > pre { background: white; color:#000}
   main > code { background:white; color:#000}
-  body select { color: black; background-color: white;}
+  body select { color: black; background-color: dddddd;}
   main .project { border-left:2px solid white }
 }
 
