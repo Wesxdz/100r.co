@@ -1,9 +1,3 @@
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/417882964?h=8367143b0c" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6Mtfo8asqjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wQknBJo4aBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DDsRfbfnC_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hH4HPPqs8LI?controls=0&amp;start=105" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 <h2>Why your game engine sucks</h2>
 <p><i>A rant about the ubiquitous lackluster of modern game engines and my ideas of how to design better tools</i></p>
 
@@ -23,9 +17,19 @@
 I see a big part of the problem as <i> fragmentation via multiple discovery duplication of constraint layers</i>... Multiple operating systems, IDEs, a cornicopia of command line tools, asset creation platforms, graphics libraries, rendering interfaces, build and version systems, collaborators (including repo dependencies), and even <b>languages</b>.</p>
 <p>I hate to break it to you folks, but we're living in a global cyberspace of scattered towers and wormhaunted libraries of babel (the reality is much worse than that silo analogy you keep hearing about from groupthinkers).</p>
 <p>Why are sensory assets engine-agnostic files, while systems and data remain apartheid. You can't write GDScript in Unity, or import your nested prefab as an AActor hierarchy. The amount of wasted effort duplicating functionality is unfathomable to me.</p>
-<img src="../media/content/omnibar.png"/>
-<img src="../media/content/symbol-graph.jpg"/>
+
+<p>Here are specific examples of actual things that human beings do in game engines anno Domini 2022 that are either inhumane to developers and/or gamers, or massively unproductive and irrational as a result of legacy/poorly designed tooling infrastructure that gained a cumulative advantage.</p>
+<ul>
+    <li>Property specifiers and gameplay framework in Unreal Engine</li>
+    <li>Godot using GDScript by default instead of Python, Lua, or any open source commonly used interoperable programming language</li>
+    <li>Unity Collaborate vs git, basically Unity having completely incompetent version control</li>
+    <li>Unreal Engine using HLSL by default and cross compiling to GLSL</li>
+    <li>OOP being not just a dominant paradigm for game development, but the only constraint viable workflow to ship an indie game in Unreal Engine, Unity, or Godot</li>
+</ul>
+
+
+<p>Here are a couple of solutions I am exploring through research and tool building at Paphos Oneironautics</p>
 <ol>
-    <li><h3>The Omnibar (universal search interface)</h3></li>
-    <li><h3>Visual ECS manipulation (drag and drop modules that metaprogram C code)</h3></li>
+    <li><h3>The Omnibar (lingustically intelligent (see pragmatics) universal spatialtemporal and creation interface)</h3></li>
+    <li><h3>Visual ECS manipulation (visual tools whose outputs are simple programs)</h3></li>
 </ol>
