@@ -30,7 +30,7 @@ main > ul.jump { columns:2; line-height: 20px}
 main > ul.jump li { list-style-type: decimal-leading-zero; list-style-position: inside; text-transform: capitalize;}
 main img.medium { max-width: 300px;}
 
-main > q { font-size: 20px;max-width: 500px; display: block; margin-left:30px; }
+main > q { font-size: 16px;max-width: 500px; display: block; margin-left:30px; }
 main > pre { font-family: monospace; background: black; color:white; padding:15px; }
 main > code { font-family: monospace; font-size:12px; margin-bottom: 30px; display: block; background:black; color:white; padding:15px; white-space: pre}
 main > code comment { color:#777}
