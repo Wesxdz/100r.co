@@ -132,7 +132,8 @@ main a[target="_blank"]:after { content:"]" }
   body {background: #000; color: #dddddd}
   body header a img { filter: invert(1)}
   body a { color: white;}
-  body p { color: white;}
+  p { color: white;}
+  q { color: #BBBBBB;}
   main > pre { background: white; color:#000}
   main > code { background:white; color:#000}
   body select { color: black; background-color: dddddd;}
