@@ -139,3 +139,35 @@ main a[target="_blank"]:after { content:"]" }
   body select { color: black; background-color: dddddd;}
   main .project { border-left:2px solid white }
 }
+
+.gen
+{
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #888888;
+}
+
+.prompt
+{
+  border-radius: 4px;
+  /* border: 1px solid #000000; */
+  padding: 8px;
+  font-style:italic;
+}
+
+.dalle
+{
+  margin-top:16px;
+  border-radius: 64px;
+  /* background-color: #ff6e3c; */
+  width:fit-content;
+  border: 2px solid #ff6e3c;
+  color:#782407;
+  padding: 12px;
+  font-style:bold;
+}
+
+.aitext
+{
+  color:#0099ff;
+}
