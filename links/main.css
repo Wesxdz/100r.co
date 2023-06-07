@@ -171,3 +171,7 @@ main a[target="_blank"]:after { content:"]" }
 {
   color:#0099ff;
 }
+
+.strikethrough {
+  text-decoration: line-through;
+}
