@@ -1,0 +1,49 @@
+<p><b>Future Literate</b> began with a prototype game framework that I programmed called <a href="https://github.com/Wesxdz/bicycle-mango/blob/dcd44219defb9d2ad88c03dceb24a1b1b473bb87/bicycle_mango.h">Bicycle Mango</a>. It is essentially an ECS without entities plus some nice features like system hot reloading.</p>
+<!-- <img src="../media/content/bicycle_mango.png"> -->
+<p>I only ever finished one game using the engine: <i>Friend Limit</i><br/><a href="https://github.com/Wesxdz/friend-limit/tree/d183b1c1a44aeafef4566d3fcb76debcf7f73681">github</a> <a href="https://ldjam.com/events/ludum-dare/46/friend-limit">ludum dare entry</a></p>
+<p>I wanted to engineer a game engine for contextual intent expression embedded within games, that could be interacted with through drag and drop symbols or natural language in a scalable way.</p>
+<p>In many ways, I was inspired by the pleasant and productive no-code interface of the first game engine I ever used, <a href="https://www.stencyl.com/">Stencyl</a>, but I needed something more performant and flexible.</p>
+<img src="../media/content/fl/gui_gal_example.png" style="width:512">
+<p>Eventually, I realized how difficult it would be to maintain and improve this framework in parallel with development of an indie game. Thus I adopted <a href="https://github.com/SanderMertens/flecs">flecs</a> and started building a game engine around that instead.</p>
+<p>I developed an open source clone of <a href="https://www.pureref.com/">PureRef</a> using flecs called <a href="https://github.com/Wesxdz/gui-gal">Gui Gal</a>, I integrated <a href="https://github.com/CompVis/stable-diffusion">Stable Diffusion</a> and <a href="https://github.com/openai/whisper">Whisper</a> directly into the tooling by <a href="https://docs.python.org/3/extending/embedding.html">embedding Python in C</a>.</p>
+<p>Additionally, I prototyped concepts for a system-first game engine interface using Python.</p>
+<img src="../media/content/fl/flit_system_loop_demo.gif">
+<p>I call this interactive primitive a system compressor: a design based on the children's game hopscotch for ordering, querying, and modifying gameplay logic systems. By limiting the number of visible systems to <a href="https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two">the number of objects which can be held in a programmers short-term memory</a>, it empowers focus and clarity.</p>
+<p>A few of my functional requirements for the engine include</p>
+<ul>
+	<li>Fast understanding and manipulation of global ordering for all observers/systems/intervals in a game (ten thousand as a benchmark for a mid sized project)
+	</li>
+	<li>
+		Effortless visual understanding of query outcomes: to see the systems matched with static analysis
+	</li>
+	<li>
+		Fast iteration (hot reload of individual system code, and updates to entities/component data layouts while live)
+	</li>
+	<li>
+		Linguistic and visual marry conduit (ie integration between conceptual and implementation workflows)
+	</li>
+</ul>
+
+<p>After programming this prototype, I diverged my efforts into three distinct areas of the engine's development.</p>
+<ol>
+	<li>
+		<p><b>Creating a 'film game' (Dronthropocene) in <a href="https://upbge.org/#/">UPBGE</b></a></p>
+		<img src="../media/content/blender_logic_visual.png">
+		<img src="../media/content/film.png">
+		<p>Hypothesis: content creation tools will eventually be seamlessly integrated into engines. I wanted to experience the process of using Blender to make a game. I considered integrating Future Literate into Blender's front end, but the Eevee renderer was not efficient at realtime rendering of large number of objects, making this untenable.</p>
+	</li>
+	<li>
+		<p><a href="minerl.html"><b>VPT/MineRL</b></a>, using VPT/RL to train AI agents for gameplay and <a href="https://github.com/Wesxdz/ui-idm">to automate engine UI game development tasks</a>.</p>
+	</li>
+	<li>
+		<p><b>LitRPG GPT-3 fine tuning for pyclang/davinci-codex</b></p>
+		<p>Research on history of LitRPGs (ie reading 1/2 Prince, The Legendary Moonlight Sculptor, etc), what tools Royal Road writers use, and how to extract and codegen game mechanics from a LitRPG. For example, taking a Level Up text sheet and converting it to Flecs components and systems for LLM constraints.</p>
+		<br/>
+		<p><i>Some of my effort here split into a subproject to create an IDE for authors called Ghost Corpus: this involves creating novel data visualization tooling for book machine reading comprehension and personality engineering AI characters as a playful virtual audience to encourage human creativity</i></p>
+		<br/>
+		<img src="../media/content/coffee_river.png">
+	</li>
+</ol>
+
+
+<p>My development of Future Literate is ongoing, currently I am implementing the prototype interface in C with GPT-4 to create <a href="book_sim_online.html">Book Simulator Online</a></p>
