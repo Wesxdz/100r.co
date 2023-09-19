@@ -215,7 +215,7 @@ main a[target="_blank"]:after { content:"]" }
 
 @media (prefers-color-scheme: dark) {
   body { background: #000; color: #dddddd; }
-  a, b, p, q, li, .strikethrough, i, b, h1, h2, h3 {
+  a, b, p, q, li, s, .strikethrough, i, b, h1, h2, h3 {
     color: #ffffff;
   }
   .strikethrough { text-decoration: line-through; }
