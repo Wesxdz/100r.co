@@ -7,6 +7,11 @@
   src: url(../media/fonts/zanna.otf);
 }
 
+@font-face {
+  font-family: CharisSIL;
+  src: url(../media/fonts/CharisSIL-Regular.ttf);
+}
+
 body { background:#fff; color:#000; overflow-x: hidden; font-family: sans-serif; padding:0; margin:0;}
 
 nav { padding: 45px; float: left; }
@@ -219,4 +224,71 @@ main a[target="_blank"]:after { content:"]" }
     color: #ffffff;
   }
   .strikethrough { text-decoration: line-through; }
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective:1000px;
+  cursor:pointer;
+  margin:32px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+width: 512px;
+height: 512px;
+  border-radius:16px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* flip speed goes here */
+.flipper {
+transition: 0.6s;
+transform-style: preserve-3d;
+
+position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+backface-visibility: hidden;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+}
+
+/* front pane, placed above back */
+.front {
+z-index: 2;
+/* for firefox 31 */
+transform: rotateY(0deg);
+  background-color:white;
+}
+
+/* back, initially hidden pane */
+.back {
+transform: rotateY(180deg);
+  background-color:#fffded;
+}
+
+.deck {
+  width:100%;
+  text-align: center;
+}
+
+.prompt
+{
+  padding:32px;
+  color:#202324;
+  font-family: CharisSIL;
+  font-size: 20px;
 }
